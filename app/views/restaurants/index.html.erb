@@ -1,5 +1,8 @@
-<h1>Work PLease</h1>
+<h1>Restaurants</h1>
 
 <% @restaurants.each do |restaurant| %>
-     <p><%= restaurant.name %></p>
+  <p><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
+  <%= link_to "add review", new_restaurant_review_path(restaurant.id), class: 'btn-xs' %>
 <% end  %>
+
+<%= link_to "add", new_restaurant_path, class: 'btn btn-primary' %>

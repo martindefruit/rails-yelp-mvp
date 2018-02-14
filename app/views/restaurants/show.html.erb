@@ -1,1 +1,9 @@
-<h1>Show</h1>
+<h1><%= @restaurant.name %></h1>
+<h1><%= @restaurant.address %></h1>
+<h1><%= @restaurant.phone_number %></h1>
+<h1><%= @restaurant.category %></h1>
+
+<p><%= @review.content %></p>
+<p><%= @review.rating %></p>
+
+<%= link_to "back", restaurants_path %>
